@@ -1,0 +1,11 @@
+#!/bin/bash
+echo "================Default Kill-Port 8888==================="
+if [ $1 ]
+then
+        python /home/ryu/multicontroller/zoomulti/kill_port.py $1
+else
+        python /home/ryu/multicontroller/zoomulti/kill_port.py 8888
+fi
+echo "================Removing Mininet Cache==================="
+mn -c
+echo "================Mininet Has Clean Now!!!!==================="

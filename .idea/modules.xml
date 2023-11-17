@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file:///etc/netplan/.idea/netplan.iml" filepath="/etc/netplan/.idea/netplan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/zoomulti.iml" filepath="$PROJECT_DIR$/.idea/zoomulti.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,20 @@
+#!/bin/bash
+#启动脚本，启动Server端、5个Controller、Topo端，运行OS3E拓扑
+port=6652
+#Server
+s="=========Starting ETCD-Server Listening-Port :8888========="
+gnome-terminal -- bash -c "echo $s;echo -ne '\033]0;'\"ETCD-Server\"'\a';/home/ryu/multicontroller/zoomulti/server;exec bash"
+sleep 0.5s
+
+#Controllers
+for ((num=1;num<=5;num++))
+do
+s="=========Starting Controller Listening-Port : $(($port+$num))========="
+gnome-terminal -- bash -c "echo $s;echo -ne '\033]0;'\"Controller$num\"'\a';/home/ryu/multicontroller/zoomulti/sdn $(($port+$num));exec bash"
+sleep 0.1s
+done
+
+sleep 0.5s
+s="=========Starting OS3E Topo ! Connecting to Controller Cluster !========="
+gnome-terminal -- bash -c "echo $s;echo -ne '\033]0;'\"OS3E\"'\a';/home/ryu/multicontroller/zoomulti/topo;exec bash"
+

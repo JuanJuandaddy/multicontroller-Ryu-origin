@@ -1,0 +1,4 @@
+#!/bin/bash
+python os3e.py
+
+
